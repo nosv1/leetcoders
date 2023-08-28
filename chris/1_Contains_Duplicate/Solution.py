@@ -1,3 +1,6 @@
+# https://leetcode.com/problems/contains-duplicate/description/
+
+
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         # isistance makes sure nums is a list
@@ -21,6 +24,7 @@ class Solution:
         return False  # no duplicates found, return False
 
 
+# we do a little teaching...
 class Solution:
     def containsDuplicate(self, nums: list[int]) -> bool:
         pass
