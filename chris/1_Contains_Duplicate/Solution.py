@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/contains-duplicate/description/
 
+from typing import List
+
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
@@ -12,7 +14,7 @@ class Solution:
         if not nums:
             return False
 
-        # given we're tryna find duplicates, we can use a `set`` to store the numbers as we loop through them
+        # given we're tryna find duplicates, we can use a `set` to store the numbers as we loop through them
         # we also use a set, because it takes O(1) time to check if a number is in a set, just magic storage (idk how it works)
         # if we were to use a list instead, it would take O(n) time to check if a number is in a list,
         # basically the 'in' process would loop the list again
@@ -25,7 +27,7 @@ class Solution:
 
 
 # we do a little teaching...
-class Solution:
+class _Solution:
     def containsDuplicate(self, nums: list[int]) -> bool:
         pass
 
@@ -37,7 +39,7 @@ class Solution:
         # while True:
         #     num = random.choice(nums, k=1)
         #     contains_duplicate = num in nums
-        #     no way to know if we've checked all the numbers
+        #     no way to know if we've checked all the numbers unless we keep track of the numbers we've checked...
 
         # return contains_duplicate
 
@@ -65,3 +67,19 @@ class Solution:
         #     checked_nums.add(num)
 
         # return False
+
+
+nums = [1, 2, 3, 1]
+print(_Solution().containsDuplicate(nums))
+
+nums = [1, 2, 3, 4]
+print(_Solution().containsDuplicate(nums))
+
+nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
+print(_Solution().containsDuplicate(nums))
+
+# import random
+# import timeit
+
+# nums = [random.randint(0, 1000000) for _ in range(1000000)]
+# print(timeit.timeit(lambda: _Solution().containsDuplicate(nums), number=1))
